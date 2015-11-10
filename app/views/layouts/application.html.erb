@@ -10,5 +10,7 @@
 
   <%= yield %>
 
+  <fb:login-button autologoutlink='true' size='xlarge' scope='public_profile,email,user_friends' onlogin='checkLoginState();'>
+  </fb:login-button>
 </body>
 </html>

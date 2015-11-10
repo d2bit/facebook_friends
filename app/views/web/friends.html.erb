@@ -1,0 +1,13 @@
+<%- if @friends.present? %>
+  <h1>List of friends of <%= @user.name %></h1>
+  <table>
+  <%- @friends.each.with_index(1) do |user, index| %>
+    <tr>
+      <td><%= index %></td>
+      <td><%= user['name'] %></td>
+    </tr>
+  <% end %>
+  </table>
+<% else %>
+  <h1><%= @user.name %> seems to have no friends. =(</h1>
+<% end %>
